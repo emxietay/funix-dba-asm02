@@ -1,5 +1,6 @@
 package asm02;
 
+import asm02.exception.FileReadException;
 import asm02.io.FileService;
 import asm02.io.FileServiceImpl;
 import asm02.io.InputService;
@@ -12,18 +13,37 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+
+import static asm02.sort.Sorting.binarySearch;
+import static asm02.sort.Sorting.quickSort;
 
 public class Application {
 
     public static final Scanner SCANNER = new Scanner(System.in);
-    private static final String FILE_REPOSITORY = "src/main/java/asm02/file/";
+    public static final String FILE_REPOSITORY = "src/main/java/asm02/file/";
 
+    static FileService fileService = FileServiceImpl.getInstance();
+    static InputService inputService = new InputServiceImpl();
+    static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) throws IOException {
 
-        FileService fileService = new FileServiceImpl();
-        InputService inputService = new InputServiceImpl();
+        while (true) {
+            int option = scanner.nextInt();
+            switch (option) {
+                case 1: display();
+            }
+
+        }
+
+
+
+
+
+
+
 
         var input = getDoubles(inputService);
 
@@ -35,18 +55,31 @@ public class Application {
 
         //        writeToFile(fileWriterService, Arrays.toString(input));
 
-        double[] list =  readFile();
+        double[] list = readFile("INPUT.TXT");
 
-//        Sorting.bubleSort(list.clone());
-        Sorting.selectionSort(list.clone());
-        searchLargerValues(list);
+        List<List<Double>> lists = Sorting.bubleSort(list);
+        for (List<Double> list1 : lists) {
+            fileService.writeToFile(FILE_REPOSITORY.concat("INPUT2.TXT"), Arrays.toString(list1.toArray()) + "\n");
 
+        }
+        Sorting.selectionSort(list);
+        searchLargerValues(list, 115);
+
+
+        double[] cloneList = list.clone();
+        quickSort(cloneList);
+        int i = binarySearch(cloneList, 1115);
+        if (i != -1) {
+            System.out.println("The right position: " + i);
+        } else {
+            System.out.println("The value does not exist");
+        }
 
 
     }
 
-    private static void searchLargerValues(double[] list) {
-        List<Integer> foundIndices = Sorting.linearSearch(list.clone(), 115);
+    private static void searchLargerValues(double[] list, int search) {
+        List<Integer> foundIndices = Sorting.linearSearch(list.clone(), search);
         if (foundIndices.size() > 0) {
             System.out.print("Larger position(s): ");
             for (int i = 0; i < foundIndices.size(); i++) {
@@ -57,10 +90,24 @@ public class Application {
         }
     }
 
-    private static double[] readFile() {
+    private static double[] readFile2(String fileName) {
+        FileServiceImpl fileService = FileServiceImpl.getInstance();
+        Path file = (Path.of(FILE_REPOSITORY.concat(fileName)));
+        List<Double> list = new ArrayList<Double>();
+        double[] doubles = null;
+        try {
+            doubles = fileService.readFromFile(fileName);
+        } catch (FileReadException e) {
+            System.out.println("Cannot read file " + fileName);
+        }
+
+        return doubles;
+    }
+
+    private static double[] readFile(String fileName) {
         Scanner fileScanner;
         List<Double> list = new ArrayList<Double>();
-        Path file = (Path.of(FILE_REPOSITORY.concat("INPUT.TXT")));
+        Path file = (Path.of(FILE_REPOSITORY.concat(fileName)));
         try {
             fileScanner = new Scanner(file.toFile());
 
@@ -95,24 +142,27 @@ public class Application {
 
     }
 
+    private static void display() {
+        System.out.println(DISPLAY_TEXT);
+    }
     private static final String DISPLAY_TEXT = """
             +-------------------Menu------------------+
 
-            |      1.Manual Input                 |
+            |      1.Manual Input                     |
 
-            |      2.File input                        |
+            |      2.File input                       |
 
-            |      3.Bubble sort                    |
+            |      3.Bubble sort                      |
 
-            |      4.Selection sort                 |
+            |      4.Selection sort                   |
 
-            |      5.Insertion sort                  |
+            |      5.Insertion sort                   |
 
-            |      6.Search > value                |
+            |      6.Search > value                   |
 
-            |      7.Search = value                |
+            |      7.Search = value                   |
 
-            |      0.Exit                              |
+            |      0.Exit                             |
 
             +-----------------------------------------.+""";
 }

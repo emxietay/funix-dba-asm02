@@ -1,31 +1,47 @@
 
 {
-java:S2293>"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô¥×Úûÿÿÿÿ8˜ëá”º1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÌŸ¬¼8™ëá”º1
+java:S2293`"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô¥×Úûÿÿÿÿ8Œàœº1
+{
+java:S2293m"YReplace the type specification in this constructor call with the diamond operator ("<>").(ô¥×Úûÿÿÿÿ8àœº1
+m
+java:S1301#"KReplace this "switch" statement by "if" statements to increase readability.(­Ö¹§úÿÿÿÿ8àœº1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÌŸ¬¼8àœº1
 g
-java:S2095A"EUse try-with-resources or close this "Scanner" in a "finally" clause.(½°†ÿÿÿÿÿ8­ëá”º1
-\
-java:S1854"?Remove this useless assignment to local variable "fileService".(ÿ²Ô¯8±ëá”º1
-M
-java:S1481"0Remove this unused "fileService" local variable.(ÿ²Ô¯8²ëá”º1
-W	java:S125$"<This block of commented-out lines of code should be removed.(Ÿ£Ø$8²ëá”º1
-X	java:S125("<This block of commented-out lines of code should be removed.(¡¬šÉ8Óİã”º1
+java:S2095p"EUse try-with-resources or close this "Scanner" in a "finally" clause.(½°†ÿÿÿÿÿ8šàœº1
+D
+java:S2189!""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8šàœº1
+t
+java:S1845"RRename field "scanner" to prevent any misunderstanding/clash with field "SCANNER".(îÃ‹üÿÿÿÿ8›àœº1
+C	java:S131#""Add a default case to this switch.(­Ö¹§úÿÿÿÿ8¡àœº1
+W	java:S1258"<This block of commented-out lines of code should be removed.(Ÿ£Ø$8¢àœº1
+G	java:S106I"+Replace this use of System.out by a logger.(ø¬å8£àœº1
+L	java:S106K"+Replace this use of System.out by a logger.(¤Ã»½ûÿÿÿÿ8£àœº1
 [
-java:S11552">Use isEmpty() to check whether the collection is empty or not.(¢ÒÓ™8•íÉ•º1
-G	java:S1063"+Replace this use of System.out by a logger.(²êÛÔ8ÎÂ•º1
-G	java:S1065"+Replace this use of System.out by a logger.(¼Îì”8Ü¾Ã•º1
-L	java:S1068"+Replace this use of System.out by a logger.(¤Ã»½ûÿÿÿÿ8–íÉ•º1
-]	java:S125E"<This block of commented-out lines of code should be removed.(Äš‹Öüÿÿÿÿ8µëá”º1
-L	java:S106I"+Replace this use of System.out by a logger.(Ÿ±øÒúÿÿÿÿ8˜íÉ•º1
-U
-java:S1854\"8Remove this useless assignment to local variable "path".(ßõü8·ëá”º1
-a
-java:S1172Y"?Remove these unused method parameters "fileService", "content".(áİñùÿÿÿÿ8·ëá”º1
-F	java:S106Z"+Replace this use of System.out by a logger.(°ŒßI8™íÉ•º1
-F
-java:S1481\")Remove this unused "path" local variable.(ßõü8¸ëá”º1
-]	java:S125^"<This block of commented-out lines of code should be removed.(ïÊõıÿÿÿÿ8¸ëá”º1
-M
-java:S1068b"0Remove this unused "DISPLAY_TEXT" private field.(¡ô‘ì8¹ëá”º1
-R
-java:S1144Y"0Remove this unused private "writeToFile" method.(áİñùÿÿÿÿ8¹ëá”º1
+java:S1155S">Use isEmpty() to check whether the collection is empty or not.(¢ÒÓ™8¤àœº1
+G	java:S106T"+Replace this use of System.out by a logger.(²êÛÔ8¤àœº1
+G	java:S106V"+Replace this use of System.out by a logger.(¼Îì”8¥àœº1
+L	java:S106Y"+Replace this use of System.out by a logger.(¤Ã»½ûÿÿÿÿ8¥àœº1
+Z
+java:S1854`"8Remove this useless assignment to local variable "list".(ô¥×Úûÿÿÿÿ8¥àœº1
+Z
+java:S1854_"8Remove this useless assignment to local variable "file".(†Î¼íıÿÿÿÿ8¥àœº1
+K
+java:S1481_")Remove this unused "file" local variable.(†Î¼íıÿÿÿÿ8¦àœº1
+K
+java:S1481`")Remove this unused "list" local variable.(ô¥×Úûÿÿÿÿ8§àœº1
+G	java:S106e"+Replace this use of System.out by a logger.(ÔÒ8§àœº1
+]	java:S125t"<This block of commented-out lines of code should be removed.(Äš‹Öüÿÿÿÿ8©àœº1
+L	java:S106x"+Replace this use of System.out by a logger.(Ÿ±øÒúÿÿÿÿ8ªàœº1
+V
+java:S1854‹"8Remove this useless assignment to local variable "path".(ßõü8«àœº1
+b
+java:S1172ˆ"?Remove these unused method parameters "fileService", "content".(áİñùÿÿÿÿ8«àœº1
+G	java:S106‰"+Replace this use of System.out by a logger.(°ŒßI8«àœº1
+G
+java:S1481‹")Remove this unused "path" local variable.(ßõü8«àœº1
+^	java:S125"<This block of commented-out lines of code should be removed.(ïÊõıÿÿÿÿ8«àœº1
+M	java:S106’"+Replace this use of System.out by a logger.(²©¸³ûÿÿÿÿ8Ášãœº1
+P
+java:S1144]".Remove this unused private "readFile2" method.(ï‘Ü±úÿÿÿÿ8¬àœº1
+S
+java:S1144ˆ"0Remove this unused private "writeToFile" method.(áİñùÿÿÿÿ8¬àœº1

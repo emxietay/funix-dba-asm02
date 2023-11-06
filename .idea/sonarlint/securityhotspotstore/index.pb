@@ -64,3 +64,9 @@ R
 "src/main/java/asm02/file/INPUT.TXT,1/4/14bcccbae7b49b578049ae425afbf19b8c90df39
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+S
+#src/main/java/asm02/file/INPUT1.TXT,7/6/76d8d94fff6e3c68154d85892ed4d9e3c719b72e
+S
+#src/main/java/asm02/file/INPUT2.TXT,f/8/f89396a2b602c6f9b5f8c06365606350255ed255
+d
+4src/main/java/asm02/exception/FileReadException.java,8/3/83d4ba9f0a28567e853b8c1930d34f2833169f09

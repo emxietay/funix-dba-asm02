@@ -1,19 +1,32 @@
 package asm02.sort;
 
+import asm02.Application;
+import asm02.io.FileServiceImpl;
+
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Sorting {
-    public static void bubleSort(double[] a) {
-        if(a ==null || a.length==0)
-            return;
+
+        private Sorting() {
+            throw new IllegalStateException("Sorting class");
+        }
+
+
+    public static List<List<Double>> bubleSort(double[] a) {
+        List<List<Double>> result = new ArrayList<>();
+        if(a ==null || a.length==0) {
+            return result;
+        }
 
         int size = a.length;
-
         System.out.println();
         for (int i = 0; i <size-1 ; i++) {
             System.out.println(Arrays.toString(a));
+            result.add(Arrays.stream(a).boxed().collect(Collectors.toList()));
             for (int j = 0; j <size-i-1 ; j++) {
                 //check the adjacent elements
 
@@ -26,13 +39,18 @@ public class Sorting {
             }
 
         }
+        return result;
     }
-    public static void selectionSort(double[] a) {
-        if(a==null || a.length==0)
-            return;
+    public static List<List<Double>> selectionSort(double[] a) {
+        List<List<Double>> result = new ArrayList<>();
+        FileServiceImpl fileService = FileServiceImpl.getInstance();
+//        if(a==null || a.length==0)
+//            return result;
         int size = a.length;
         for (int i = 0; i < a.length - 1; i++) {
             System.out.println(Arrays.toString(a));
+            result.add(Arrays.stream(a).boxed().collect(Collectors.toList()));
+            fileService.writeToFile((Application.FILE_REPOSITORY.concat("INPUT1.TXT")), Arrays.toString(a) + "\n");
             int iMin = i;
             for (int j = i + 1; j < a.length; j++)
                 if (a[j] < a[iMin]) {
@@ -44,12 +62,18 @@ public class Sorting {
                 a[iMin] = temp;
             }
         }
+
         System.out.println(Arrays.toString(a));
+        return result;
     }
-    public static void insertionSort(double[] a) {
+    public static List<List<Double>> insertionSort(double[] a) {
+        List<List<Double>> result = new ArrayList<>();
+        if(a==null || a.length==0) return result;
         double temp;
 
         for (int i = 1; i < a.length; i++) {
+            System.out.println(Arrays.toString(a));
+            result.add(Arrays.stream(a).boxed().collect(Collectors.toList()));
             for(int j = i ; j > 0 ; j--){
                 if(a[j] < a[j-1]){
                     temp = a[j];
@@ -57,7 +81,7 @@ public class Sorting {
                     a[j-1] = temp;
                 }
             }
-        }
+        } return result;
     }
     public static void quickSort(double[] a) {
         if(a==null || a.length==0)

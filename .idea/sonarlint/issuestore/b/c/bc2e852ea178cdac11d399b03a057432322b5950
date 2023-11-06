@@ -1,12 +1,20 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õ‚­‰8ˆª»•º1
-W
-java:S1118":Add a private constructor to hide the implicit public one.(ì§ÒÕ8¡ª»•º1
-L	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áþÿÿÿÿ8¢ª»•º1
-L	java:S106"+Replace this use of System.out by a logger.(›µ²Øøÿÿÿÿ8¢ª»•º1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õ‚­‰8¬¹Íœº1
+L	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áþÿÿÿÿ8Ý¹Íœº1
+L	java:S106"+Replace this use of System.out by a logger.(›µ²Øøÿÿÿÿ8Þ¹Íœº1
+o
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(Ô»ˆÌ8Þ¹Íœº1
 Z
-java:S1854!"8Remove this useless assignment to local variable "size".(ŸÜ“³ùÿÿÿÿ8£ª»•º1
+java:S18541"8Remove this useless assignment to local variable "size".(ŸÜ“³ùÿÿÿÿ8ß¹Íœº1
+X	java:S125/"<This block of commented-out lines of code should be removed.(ìŸè–8à¹Íœº1
 K
-java:S1481!")Remove this unused "size" local variable.(ŸÜ“³ùÿÿÿÿ8£ª»•º1
-L	java:S106#"+Replace this use of System.out by a logger.(›µ²Øøÿÿÿÿ8¤ª»•º1
-L	java:S106/"+Replace this use of System.out by a logger.(›µ²Øøÿÿÿÿ8¤ª»•º1
+java:S14811")Remove this unused "size" local variable.(ŸÜ“³ùÿÿÿÿ8à¹Íœº1
+L	java:S1063"+Replace this use of System.out by a logger.(›µ²Øøÿÿÿÿ8à¹Íœº1
+o
+java:S62044"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(Ô»ˆÌ8á¹Íœº1
+L	java:S106B"+Replace this use of System.out by a logger.(›µ²Øøÿÿÿÿ8â¹Íœº1
+L	java:S106K"+Replace this use of System.out by a logger.(›µ²Øøÿÿÿÿ8ã¹Íœº1
+o
+java:S6204L"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(Ô»ˆÌ8ã¹Íœº1
+L
+java:S1128"/Remove this unused import 'java.nio.file.Path'.(×²êÂ8ç¹Íœº1

@@ -1,4 +1,9 @@
 
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÛÎÖÆûÿÿÿÿ8æŠ“º1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÛÎÖÆûÿÿÿÿ8œ¯ï˜º1
+»
+java:S6548
+"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(°¥µúúÿÿÿÿ8£¯ï˜º1
+f
+java:S21478"DCombine this catch with the one at line 54, which has the same body.(é–³öûÿÿÿÿ8ƒÊï˜º1
 H
-java:S1068"+Remove this unused "scanner" private field.(‚´®8íŠ“º1
+java:S1068"+Remove this unused "scanner" private field.(‚´®8©¯ï˜º1
